@@ -5,7 +5,7 @@ import Welcome from './components/Welcome';
 const App = () => {
   return (
     <>
-      <Welcome message="Welcome to Kurly" />
+      <Welcome message="Welcome to Developers!!!" />
     </>
   );
 }

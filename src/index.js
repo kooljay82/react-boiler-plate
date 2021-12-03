@@ -7,7 +7,7 @@ import App from './App.jsx';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App msg="Hello Kurly" />
+    <App msg="Hello Developers" />
   </React.StrictMode>,
   document.getElementById('root')
 );
