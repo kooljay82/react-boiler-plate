@@ -1,0 +1,11 @@
+$mainBg: #333;
+$subBg: #eee;
+
+html {
+  background: $mainBg;
+  body {
+    padding: 0;
+    margin: 0;
+    background: $subBg;
+  }
+}
