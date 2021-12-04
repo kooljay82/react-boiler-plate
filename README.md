@@ -14,6 +14,7 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#commands">Commands</a></li>
+        <li><a href="#installation">Warnings</a></li>
       </ul>
     </li>
     <li><a href="#contributing">Contributors & Contacts</a></li>
@@ -66,12 +67,15 @@ React 보일러 플레이트
 
 1. Clone the repo
    ```sh
-   git clone SOME_URL
+   git clone https://github.com/kooljay82/react-boiler-plate.git
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
+3. After installation
+
+반드시 .git 디렉토리 제거 후 `git init` 하세요.
 
 <!-- COMMANDS -->
 
@@ -88,6 +92,16 @@ React 보일러 플레이트
   "test:unit": "jest --watch",
   "test:check": "node helperServer.js coverage"
 ```
+
+<!-- WARNINGS -->
+
+### Warnings
+
+```
+  npm run start -> https://localhost:8080
+```
+
+본 프로젝트의 webpack dev server는 `https: true`가 기본으로 설정되어 있습니다. `http`로 이용하기 위해서는 `webpack.config.js`의 해당 옵션을 수정해서 사용하세요.
 
 <!-- CONTRIBUTING -->
 

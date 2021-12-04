@@ -21,9 +21,17 @@
     "type": "git",
     "url": "https://github.com/kooljay82/react-boiler-plate"
   },
-  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/kooljay82/react-boiler-plate/issues",
+    "email": "jinho82@gmail.com"
+  },
+  "keywords": [
+    "react",
+    "webpack5",
+    "react boiler plate"
+  ],
   "author": "임진호 <jinho82@gmail.com>",
-  "homepage": "",
+  "homepage": "https://github.com/kooljay82/react-boiler-plate#readme",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/plugin-transform-runtime": "^7.16.4",
