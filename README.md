@@ -17,7 +17,7 @@
         <li><a href="#installation">Warnings</a></li>
       </ul>
     </li>
-    <li><a href="#contributing">Contributors & Contacts</a></li>
+    <li><a href="#contributing">Contributing</a></li>
   
   </ol>
 </details>
@@ -28,7 +28,7 @@
 
 React 보일러 플레이트
 
-재직중인 회사에서 기술 스택을 통일하기 위해서 제작하였습니다. cra의 간편함을 알고 있지만 향후 우리의 개발 환경을 자유롭게 수정하기 위해서 의미없을 수도 있는 보일러 플레이트를 제작하였습니다. 오류가 발생하면 리프트와 PR 감사히 받겠습니다.
+재직중인 회사에서 기술 스택을 통일하기 위해서 제작하였습니다. cra의 간편함을 알고 있지만 향후 우리의 개발 환경을 자유롭게 수정하기 위해서 의미없을 수도 있는 보일러 플레이트를 제작하였습니다. 오류가 발생하면 리포트와 PR 감사히 받겠습니다.
 
 ### Built With
 
@@ -105,6 +105,6 @@ React 보일러 플레이트
 
 <!-- CONTRIBUTING -->
 
-## Contributors & Contacts
+## Contributing
 
 누구나 컨트리뷰터가 될수 있습니다. 다운스트림으로 fork 하신 후 PR 부탁드립니다.
