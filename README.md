@@ -89,7 +89,8 @@ React 보일러 플레이트
   "pret:watch": "onchange \"src/\" -- prettier --write --ignore-unknown {{changed}}",
   "docs": "./node_modules/.bin/jsdoc -c jsdoc.json",
   "docs:check": "node helperServer.js docs",
-  "test:unit": "jest --watch",
+  "test:dev": "jest --watch",
+  "test:unit": "jest",
   "test:check": "node helperServer.js coverage"
 ```
 
