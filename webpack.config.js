@@ -6,7 +6,7 @@ const DotEnv = require('dotenv-webpack');
 
 module.exports = (env) => ({
   mode: 'development',
-  entry: ['@babel/polyfill', './src/index.js'],
+  entry: ['./src/index.js'],
   devtool: 'inline-source-map',
   devServer: {
     static: path.join(__dirname, 'dist'),
@@ -30,7 +30,7 @@ module.exports = (env) => ({
     }),
   ],
   output: {
-    filename: 'picking.[hash].js',
+    filename: 'index.[hash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
