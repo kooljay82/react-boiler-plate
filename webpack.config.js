@@ -32,6 +32,7 @@ module.exports = (env) => ({
   output: {
     filename: 'index.[hash].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     clean: true,
   },
   module: {
