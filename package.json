@@ -8,6 +8,9 @@
   },
   "scripts": {
     "start": "webpack serve --env development",
+    "report": "webpack --env production && webpack-bundle-analyzer --port=8888 ./dist/bundle-stats.json",
+    "build:dev": "webpack --env development",
+    "build:stg": "webpack --env staging",
     "build": "webpack --env production",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "pret": "prettier --write \"src/\"",
@@ -43,6 +46,7 @@
     "@testing-library/user-event": "^13.5.0",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
+    "core-js": "^3.20.1",
     "css-loader": "^6.5.1",
     "csv-loader": "^3.0.3",
     "dotenv-webpack": "^7.0.3",
@@ -60,6 +64,7 @@
     "jest-svg-transformer": "^1.0.0",
     "jsdoc": "^3.6.7",
     "jsdom": "^16.7.0",
+    "mini-css-extract-plugin": "^2.4.5",
     "onchange": "^7.1.0",
     "prettier": "2.3.2",
     "prop-types": "^15.7.2",
@@ -67,6 +72,7 @@
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.61.0",
+    "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0",
     "xml-loader": "^1.2.1"

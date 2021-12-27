@@ -38,7 +38,7 @@ React 보일러 플레이트
 - ESLint, Prettier - 문법 및 포맷 체크
 - JSDoc - 개발 문서화
 
-** 타입스크립트는 추후에 적용 예정입니다. 대신 타입 체크는 PorpTypes를 이용 합니다.
+\*\* 타입스크립트는 추후에 적용 예정입니다. 대신 타입 체크는 PorpTypes를 이용 합니다.
 
 <!-- GETTING STARTED -->
 
@@ -83,6 +83,9 @@ React 보일러 플레이트
 
 ```
   "start": "webpack serve --env development",
+  "report": "webpack --env production && webpack-bundle-analyzer --port=8888 ./dist/bundle-stats.json",
+  "build:dev": "webpack --env development",
+  "build:stg": "webpack --env staging",
   "build": "webpack --env production",
   "lint": "eslint \"src/**/*.{js,jsx}\"",
   "pret": "prettier --write \"src/\"",
