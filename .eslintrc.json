@@ -2,31 +2,31 @@
 	"env": {
 		"browser": true,
 		"es2021": true,
-		"node": true,
-		"jest/globals": true
-	},
-	"settings": {
-		"react": {
-			"version": "detect"
-		}
+		"node": true
 	},
 	"extends": [
 		"eslint:recommended",
 		"plugin:react/recommended",
-		"plugin:jsx-a11y/recommended"
+		"plugin:@typescript-eslint/recommended"
 	],
+	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaFeatures": {
-				"jsx": true
+			"jsx": true
 		},
 		"ecmaVersion": 12,
 		"sourceType": "module"
 	},
 	"plugins": [
 		"react",
-		"jsx-a11y",
-		"jest"
+		"@typescript-eslint"
 	],
 	"rules": {
+		"@typescript-eslint/no-var-requires": 0
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
 	}
 }
