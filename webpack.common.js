@@ -1,30 +1,37 @@
 const path = require('path');
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const DotEnv = require('dotenv-webpack');
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const passEnvPath = (env) => {
+  let envPath = '';
+  if (env.production) {
+    envPath = 'production';
+  } else if (env.staging) {
+    envPath = 'staging';
+  } else if (env.development) {
+    envPath = 'development';
+  }
+  return `./.env.${envPath}`;
+};
 
 module.exports = (env) => ({
-  mode: 'development',
-  entry: ['./src/index.js'],
-  devtool: `${env.development ? 'inline-source-map' : 'source-map'}`,
+  entry: ['./src/index.tsx'],
   devServer: {
     static: path.join(__dirname, 'dist'),
     compress: true,
     port: 8080,
     hot: true,
-    host: '0.0.0.0',
-    https: true,
     historyApiFallback: true,
     allowedHosts: 'all',
+    server: {
+      type: 'https',
+    },
   },
   plugins: [
     new DotEnv({
-      path: `./.env.${env.production ? 'production' : env.staging ? 'staging' : 'development'}`,
+      path: passEnvPath(env),
       systemvars: true,
     }),
     new HtmlWebpackPlugin({
@@ -32,17 +39,18 @@ module.exports = (env) => ({
       inject: 'body',
       cache: false,
     }),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
-      reportFilename: 'bundle-report.html',
-      openAnalyzer: false,
-      generateStatsFile: true,
-      statsFilename: 'bundle-stats.json',
-    }),
     new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'public/**/*',
+          filter: async (resourcePath) => !resourcePath.includes('index.html'),
+          to: '[name][ext]',
+        },
+      ],
+    }),
   ],
   output: {
-    filename: `${env.development ? '[name].bundle.js' : '[name].[contenthash].bundle.js'}`,
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     clean: true,
@@ -50,10 +58,10 @@ module.exports = (env) => ({
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/i,
+        test: /\.(ts|tsx|js|jsx)$/i,
         exclude: /node_modules/,
         resolve: {
-          extensions: ['.js', '.jsx'],
+          extensions: ['.ts', '.tsx', '.js', '.jsx'],
         },
         use: {
           loader: 'babel-loader',
@@ -61,7 +69,14 @@ module.exports = (env) => ({
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+            },
+          },
+        ],
       },
       {
         test: /\.css$/i,
@@ -86,10 +101,15 @@ module.exports = (env) => ({
     ],
   },
   optimization: {
-    usedExports: true,
+    runtimeChunk: 'single',
     splitChunks: {
-      chunks: 'all',
-      name: 'chunk-vendors',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
     },
   },
 });
