@@ -55,12 +55,12 @@ React 보일러 플레이트
 - node
 
   ```sh
-  node -v v14.x.x
+  node -v v20.11.0
   ```
 
 - npm
   ```sh
-  npm -v 7.x.x
+  npm 10.2.4
   ```
 
 ### Installation
