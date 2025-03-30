@@ -35,7 +35,6 @@ React 보일러 플레이트
 - React, TypeScript, Webpack, Babel - 개발 환경 구성
 - testing-library/react, jest, jest-dom - 테스트 환경 구성
 - ESLint, Prettier - 문법 및 포맷 체크
-- JSDoc - 개발 문서화
 
 <!-- GETTING STARTED -->
 
@@ -52,12 +51,12 @@ React 보일러 플레이트
 - node
 
   ```sh
-  node -v v20.11.0
+  node -v v23.10.0
   ```
 
 - npm
   ```sh
-  npm 10.2.4
+  npm 10.9.2
   ```
 
 ### Installation
@@ -87,11 +86,8 @@ React 보일러 플레이트
   "lint": "eslint \"src/**/*.{js,jsx}\"",
   "pret": "prettier --write \"src/\"",
   "pret:watch": "onchange \"src/\" -- prettier --write --ignore-unknown {{changed}}",
-  "docs": "./node_modules/.bin/jsdoc -c jsdoc.json",
-  "docs:check": "node helperServer.js docs",
   "test:dev": "jest --watch",
-  "test:unit": "jest",
-  "test:check": "node helperServer.js coverage"
+  "test:unit": "jest"
 ```
 
 <!-- WARNINGS -->
