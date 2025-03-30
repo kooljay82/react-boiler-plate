@@ -1,6 +1,6 @@
 {
   "name": "react-boiler-plate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "리액트 프로젝트 보일러 플레이트",
   "private": true,
   "engines": {
