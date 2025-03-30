@@ -1,6 +1,6 @@
 {
   "name": "react-boiler-plate",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "리액트 프로젝트 보일러 플레이트",
   "private": true,
   "engines": {
@@ -11,14 +11,11 @@
     "build:dev": "webpack --config webpack.prod.js --env development",
     "build:stg": "webpack --config webpack.prod.js --env staging",
     "build": "webpack --config webpack.prod.js --env production",
-    "docs": "npx typedoc",
-    "docs:check": "node helperServer.ts docs",
     "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\"",
     "pret": "prettier --write \"src/\"",
     "pret:watch": "onchange \"src/\" -- prettier --write --ignore-unknown {{changed}}",
     "test:dev": "jest --watch",
-    "test:unit": "jest",
-    "test:check": "node helperServer.ts coverage"
+    "test:unit": "jest"
   },
   "repository": {
     "type": "git",
@@ -81,6 +78,7 @@
     "sass": "^1.80.3",
     "sass-loader": "^16.0.2",
     "style-loader": "^3.3.1",
+    "typedoc": "^0.23.7",
     "typescript": "^4.7.4",
     "webpack": "^5.61.0",
     "webpack-cli": "^4.9.1",

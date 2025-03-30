@@ -36,7 +36,6 @@ React 보일러 플레이트
 - testing-library/react, jest, jest-dom - 테스트 환경 구성
 - PropTypes - 타입 체크
 - ESLint, Prettier - 문법 및 포맷 체크
-- JSDoc - 개발 문서화
 
 \*\* 타입스크립트는 추후에 적용 예정입니다. 대신 타입 체크는 PorpTypes를 이용 합니다.
 
@@ -55,12 +54,12 @@ React 보일러 플레이트
 - node
 
   ```sh
-  node -v v20.11.0
+  node -v v23.10.0
   ```
 
 - npm
   ```sh
-  npm 10.2.4
+  npm 10.9.2
   ```
 
 ### Installation
@@ -90,11 +89,8 @@ React 보일러 플레이트
   "lint": "eslint \"src/**/*.{js,jsx}\"",
   "pret": "prettier --write \"src/\"",
   "pret:watch": "onchange \"src/\" -- prettier --write --ignore-unknown {{changed}}",
-  "docs": "./node_modules/.bin/jsdoc -c jsdoc.json",
-  "docs:check": "node helperServer.js docs",
   "test:dev": "jest --watch",
-  "test:unit": "jest",
-  "test:check": "node helperServer.js coverage"
+  "test:unit": "jest"
 ```
 
 <!-- WARNINGS -->
