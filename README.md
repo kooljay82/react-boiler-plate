@@ -32,12 +32,9 @@ React 보일러 플레이트
 
 ### Built With
 
-- React, Webpack, Babel - 개발 환경 구성
+- React, TypeScript, Webpack, Babel - 개발 환경 구성
 - testing-library/react, jest, jest-dom - 테스트 환경 구성
-- PropTypes - 타입 체크
 - ESLint, Prettier - 문법 및 포맷 체크
-
-\*\* 타입스크립트는 추후에 적용 예정입니다. 대신 타입 체크는 PorpTypes를 이용 합니다.
 
 <!-- GETTING STARTED -->
 
