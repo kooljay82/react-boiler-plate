@@ -1,0 +1,23 @@
+/**
+ * Global Variables
+ * 스타일시트의 전역 변수를 관리하는 파일입니다.
+ * 그대로 사용하셔도 되지만, 각자 프로젝트에 맞게 자유롭게 수정하여 사용하세요.
+ */
+$default-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$default-font-color: #333;
+$default-font-size: 20px;
+$small-font-size: 14px;
+$default-font-weight: 400;
+$strong-font-weight: bolder;
+$light-font-weight: 300;
+$default-line-height: 28px;
+$default-background-color: #4b4b4b;
+/**
+ * Breakpoints
+ * 0px - 767px: 스마트폰
+ * 768px - 1023px: 태블릿
+ * 1024px and up: 데스크탑
+ */
+$breakpoint-phone: 0px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;

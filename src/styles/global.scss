@@ -1,0 +1,55 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+body {
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  font-weight: $default-font-weight;
+  line-height: $default-line-height;
+  color: $default-font-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $default-background-color;
+
+  small {
+    font-size: 0.8rem;
+  }
+
+  .strong {
+    font-weight: $strong-font-weight;
+  }
+
+  .hint {
+    font-size: $small-font-size;
+  }
+
+  .warn {
+    color: red;
+  }
+
+  .ir {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include desktop {
+    font-size: 14px;
+  }
+}
