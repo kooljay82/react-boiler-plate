@@ -1,74 +1,92 @@
-# REACT-BOILER-PLATE
+# React TypeScript Boilerplate
 
-## Overview
+## 📋 Overview
 
-이 프로젝트는 React + TypeScript 기반의 SPA 개발을 빠르게 시작할 수 있도록 구성된 보일러플레이트입니다.  
-Webpack, Babel, ESLint, Prettier, Jest 등 실무 환경에서 필요한 도구들이 기본적으로 세팅되어 있어  
-번거로운 초기 설정 없이 개발에 집중할 수 있습니다.
+React + TypeScript 기반의 SPA 개발을 위한 보일러플레이트입니다.  
+실무 환경에서 필요한 모든 도구들이 미리 세팅되어 있어, 초기 설정 없이 바로 개발을 시작할 수 있습니다.
 
-### Built With
+### 🛠️ Tech Stack
 
-| 목적            | 스택                                           |
-|-----------------|------------------------------------------------|
-| UI Library    | React 19                                       |
-| Type System     | TypeScript                                     |
-| Routing         | React Router DOM                               |
-| Styling         | Sass, CSS Modules, reset-css                   |
-| Bundler         | Webpack 5, Babel 7                             |
-| Testing         | Jest, Testing Library                          |
-| Formatting      | ESLint, Prettier                               |
-
----
-
-
-<!-- GETTING STARTED -->
-
+| Category       | Technologies                                   |
+|---------------|-----------------------------------------------|
+| Core          | React 19, TypeScript                          |
+| Routing       | React Router DOM                              |
+| Styling       | Sass, CSS Modules, reset-css                  |
+| Build Tools   | Webpack 5, Babel 7                            |
+| Testing       | Jest, React Testing Library                   |
+| Code Quality  | ESLint, Prettier                              |
+| Development   | Webpack Dev Server, Hot Module Replacement    |
 
 ## 🚀 Getting Started
 
-시작 전, 아래 환경 설정을 반드시 먼저 확인하세요.
-
 ### Prerequisites
 
-\*_해당 프로젝트는 yarn을 사용하지 않습니다._
+- Node.js v23.10.0 (nvm 사용 권장)
+- npm 10.9.2
 
-개발 환경 관리를 위하여 버전 관리자는 nvm을 사용합니다. 반드시 install 전 node 버전을 맞춰주세요.
-
-```sh
+```bash
+# nvm이 설치되어 있다면
 nvm use
-```
-
-node와 npm 버전은 아래와 같습니다.
-
-```sh
-node -v v23.10.0
-```
-
-```sh
-npm 10.9.2
 ```
 
 ### Installation
 
-1. Clone the repo
-
-```sh
+1. Clone the repository
+```bash
 git clone https://github.com/kooljay82/react-boiler-plate.git
+cd react-boiler-plate
 ```
 
-2. Install NPM packages
-
-```sh
+2. Install dependencies
+```bash
 npm install
 ```
 
-3. Scripts
+### Available Scripts
 
-```sh
-"start": "cross-env webpack-dev-server --config webpack/webpack.dev.ts",  // 개발 서버 실행
-"build": "cross-env webpack --config webpack/webpack.prod.ts",            // 프로덕션 빌드 생성
-"test": "jest --coverage",                                                // 테스트 실행 및 커버리지 리포트
-"lint": "eslint . --ext .ts,.tsx",                                        // ESLint 검사 실행
-"lint:fix": "eslint . --ext .ts,.tsx --fix",                              // ESLint 자동 수정
-"format": "prettier \"src/**/*.{ts,tsx}\" --write"                        // Prettier 코드 포맷팅
+| Script        | Description                                   |
+|--------------|-----------------------------------------------|
+| `npm start`  | 개발 서버 실행 (webpack-dev-server)           |
+| `npm build`  | 프로덕션 빌드 생성                            |
+| `npm test`   | 테스트 실행 및 커버리지 리포트                |
+| `npm lint`   | ESLint 검사 실행                             |
+| `npm lint:fix` | ESLint 자동 수정                            |
+| `npm format` | Prettier 코드 포맷팅                         |
+
+## 📁 Project Structure
+
 ```
+react-boiler-plate/
+├── src/              # 소스 코드
+├── public/           # 정적 파일
+├── tests/            # 테스트 파일
+├── webpack/          # 웹팩 설정
+│   ├── common.ts
+│   ├── dev.ts
+│   └── prod.ts
+├── jest.config.ts    # Jest 설정
+├── tsconfig.json     # TypeScript 설정
+└── package.json      # 프로젝트 설정
+```
+
+## 🔧 Configuration
+
+### TypeScript
+- Strict mode enabled
+- Path aliases configured (@/src)
+- React JSX support
+
+### Webpack
+- Development & Production configurations
+- Hot Module Replacement
+- Asset optimization
+- Source maps
+
+### Testing
+- Jest with TypeScript support
+- React Testing Library
+- Test coverage reporting
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
