@@ -59,7 +59,6 @@ npm install
 react-boiler-plate/
 ├── src/              # 소스 코드
 ├── public/           # 정적 파일
-├── tests/            # 테스트 파일
 ├── webpack/          # 웹팩 설정
 │   ├── common.ts
 │   ├── dev.ts
