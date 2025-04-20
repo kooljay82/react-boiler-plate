@@ -24,6 +24,7 @@ const config: Configuration & { devServer?: DevServerConfiguration } = merge(com
     hot: true,
     historyApiFallback: true,
     allowedHosts: 'all',
+    open: true,
   },
   module: {
     rules: [

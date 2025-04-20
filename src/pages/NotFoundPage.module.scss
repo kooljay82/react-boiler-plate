@@ -1,0 +1,24 @@
+.container {
+  width: calc(100% - 3rem);
+  width: calc(100vw - 3rem);
+  height: calc(100% - 3rem);
+  height: calc(100vh - 3rem);
+  height: calc(100dvh - 3rem);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    padding: 2rem 0;
+    font-size: 2.3rem;
+  }
+
+  p {
+    padding: 0.2rem 0;
+    font-size: 1.2rem;
+  }
+}
