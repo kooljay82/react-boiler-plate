@@ -18,7 +18,7 @@ const config: Configuration & { devServer?: DevServerConfiguration } = merge(com
     clean: true,
   },
   devServer: {
-    static: path.join(__dirname, 'dist'),
+    static: path.join(__dirname, 'public'),
     compress: true,
     port: 8080,
     hot: true,
