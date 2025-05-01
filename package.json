@@ -3,8 +3,8 @@
   "version": "2.0.1",
   "type": "module",
   "scripts": {
-    "start": "cross-env webpack-dev-server --config webpack/webpack.dev.ts",
-    "build": "cross-env webpack --config webpack/webpack.prod.ts",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack/webpack.dev.ts",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.prod.ts",
     "test": "jest --coverage",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",

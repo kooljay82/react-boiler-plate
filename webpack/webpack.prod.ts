@@ -6,7 +6,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const config: Configuration = merge(common, {
   mode: 'production',
-  devtool: 'source-map',
+  devtool: 'hidden-source-map',
   output: {
     filename: '[name].[contenthash].js',
   },
@@ -22,13 +22,11 @@ const config: Configuration = merge(common, {
               modules: {
                 localIdentName: '[name]__[local]___[hash:base64:5]',
               },
-              sourceMap: true,
             },
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
               implementation: sass,
             },
           },
