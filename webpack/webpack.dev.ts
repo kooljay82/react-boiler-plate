@@ -14,8 +14,6 @@ const config: Configuration & { devServer?: DevServerConfiguration } = merge(com
   devtool: 'inline-source-map',
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, '../dist'),
-    clean: true,
   },
   devServer: {
     static: path.join(__dirname, 'public'),
@@ -38,13 +36,11 @@ const config: Configuration & { devServer?: DevServerConfiguration } = merge(com
               modules: {
                 localIdentName: '[name]__[local]___[hash:base64:5]',
               },
-              sourceMap: true,
             },
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
               implementation: sass,
             },
           },

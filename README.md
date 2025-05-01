@@ -79,6 +79,8 @@ react-boiler-plate/
 - Development & Production configurations
 - Hot Module Replacement
 - Asset optimization
+- Production builds use `hidden-source-map` for `devtool` configuration.  
+  To debug production issues, adjust `devtool` to `source-map` temporarily and rebuild.
 - Source maps
 
 ### Testing
