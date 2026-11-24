@@ -12,7 +12,6 @@
     "@babel/preset-typescript"
   ],
   "plugins": [
-    "babel-plugin-transform-import-meta",
-    "@babel/plugin-proposal-optional-chaining"
+    "babel-plugin-transform-import-meta"
   ]
 }
